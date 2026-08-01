@@ -1,0 +1,16 @@
+version: 2
+
+# Every action in this repo is pinned to a full commit SHA rather than a tag,
+# because a tag can be re-pointed by whoever controls the action's repository.
+# Pinning trades that risk for staleness, so Dependabot opens a PR whenever a
+# pinned SHA falls behind - it rewrites the SHA and the trailing "# v5" comment
+# together.
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: ci
+    labels:
+      - dependencies

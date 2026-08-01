@@ -14,7 +14,7 @@ jobs:
     name: Shell script lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
       - name: Run shellcheck
         run: shellcheck --severity=warning scripts/*.sh
@@ -34,11 +34,11 @@ jobs:
     name: PowerShell lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
       - name: Install PSScriptAnalyzer
         shell: pwsh
-        run: Install-Module PSScriptAnalyzer -Force -Scope CurrentUser -ErrorAction Stop
+        run: Install-Module PSScriptAnalyzer -RequiredVersion 1.25.0 -Force -Scope CurrentUser -ErrorAction Stop
 
       # PSAvoidUsingWriteHost is excluded on purpose: these are interactive CLI
       # scripts whose coloured console output is the point, not a reusable module
@@ -58,9 +58,9 @@ jobs:
     name: Python lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.x'
 
@@ -69,14 +69,14 @@ jobs:
 
       - name: Lint (syntax errors and undefined names)
         run: |
-          pip install --quiet ruff
+          pip install --quiet --only-binary :all: ruff==0.16.1
           ruff check --select E9,F scripts
 
   docs:
     name: Docs consistency
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
       - name: Both translations exist and cross-link
         run: |
@@ -147,7 +147,7 @@ jobs:
     name: No leaked device data
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
       # The device exposes its serial number publicly, and the session token is
       # derived from it - so a stray copy-paste from a real unit would publish a
