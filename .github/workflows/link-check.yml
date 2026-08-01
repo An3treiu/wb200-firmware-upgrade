@@ -1,0 +1,39 @@
+name: Link check
+
+# Runs on a schedule rather than on every push: external links rot over time,
+# and transient outages should never turn a code push red.
+on:
+  schedule:
+    - cron: '0 6 1 * *'   # 06:00 UTC, first day of each month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    name: Check markdown links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Run lychee
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-retries 3
+            --accept 200,206,429
+            './**/*.md'
+          fail: false
+          output: lychee-report.md
+
+      - name: Open an issue when links are broken
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Broken links found in documentation
+          content-filepath: lychee-report.md
+          labels: documentation

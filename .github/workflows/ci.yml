@@ -1,0 +1,169 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  shell:
+    name: Shell script lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Run shellcheck
+        run: shellcheck --severity=warning scripts/*.sh
+
+      - name: Scripts must keep their executable bit
+        run: |
+          status=0
+          for file in scripts/*.sh scripts/*.py; do
+            if [ ! -x "$file" ]; then
+              echo "::error file=$file::missing executable bit (fix with: git update-index --chmod=+x $file)"
+              status=1
+            fi
+          done
+          exit $status
+
+  powershell:
+    name: PowerShell lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install PSScriptAnalyzer
+        shell: pwsh
+        run: Install-Module PSScriptAnalyzer -Force -Scope CurrentUser -ErrorAction Stop
+
+      # PSAvoidUsingWriteHost is excluded on purpose: these are interactive CLI
+      # scripts whose coloured console output is the point, not a reusable module
+      # whose output should stay in the pipeline.
+      - name: Analyze scripts
+        shell: pwsh
+        run: |
+          $issues = Invoke-ScriptAnalyzer -Path scripts -Recurse -Severity Error,Warning `
+                      -ExcludeRule PSAvoidUsingWriteHost
+          if ($issues) {
+              $issues | Format-Table RuleName, Severity, ScriptName, Line, Message -AutoSize
+              throw "PSScriptAnalyzer reported $($issues.Count) issue(s)"
+          }
+          Write-Output "No issues found."
+
+  python:
+    name: Python lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: Byte-compile
+        run: python -m compileall -q scripts
+
+      - name: Lint (syntax errors and undefined names)
+        run: |
+          pip install --quiet ruff
+          ruff check --select E9,F scripts
+
+  docs:
+    name: Docs consistency
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Both translations exist and cross-link
+        run: |
+          test -f README.md    || { echo "::error::README.md is missing"; exit 1; }
+          test -f README.ro.md || { echo "::error::README.ro.md is missing"; exit 1; }
+          grep -q 'README.ro.md' README.md || { echo "::error file=README.md::does not link to the Romanian version"; exit 1; }
+          grep -q '(README.md)'  README.ro.md || { echo "::error file=README.ro.md::does not link to the English version"; exit 1; }
+
+      - name: Translations must stay structurally in sync
+        run: |
+          en=$(grep -c '^## ' README.md)
+          ro=$(grep -c '^## ' README.ro.md)
+          echo "Top-level sections -> EN: $en, RO: $ro"
+          if [ "$en" -ne "$ro" ]; then
+            echo "::error::translations are out of sync ($en English sections vs $ro Romanian ones)"
+            exit 1
+          fi
+
+      - name: Every documented script exists
+        run: |
+          status=0
+          for script in $(grep -ohE 'scripts/[a-z0-9-]+\.(ps1|sh|py)' README.md README.ro.md | sort -u); do
+            if [ ! -f "$script" ]; then
+              echo "::error::README references $script, which does not exist"
+              status=1
+            fi
+          done
+          exit $status
+
+      # The language table and the docs/ directory must agree in both
+      # directions: no dead links, and no translation that nobody can find.
+      - name: Language table matches the files on disk
+        run: |
+          status=0
+          for doc in $(grep -ohE 'docs/README\.[a-z]{2}\.md' README.md | sort -u); do
+            if [ ! -f "$doc" ]; then
+              echo "::error file=README.md::links to $doc, which does not exist"
+              status=1
+            fi
+          done
+          for file in docs/README.*.md; do
+            if ! grep -q "$file" README.md; then
+              echo "::error file=$file::exists but is not listed in the README language table"
+              status=1
+            fi
+          done
+          exit $status
+
+      - name: Short guides keep the shared section structure
+        run: |
+          status=0
+          expected=7
+          for file in docs/README.*.md; do
+            found=$(grep -c '^## ' "$file")
+            if [ "$found" -ne "$expected" ]; then
+              echo "::error file=$file::has $found top-level sections, expected $expected"
+              status=1
+            fi
+            if ! grep -q '\.\./README\.md' "$file"; then
+              echo "::error file=$file::does not link back to the English guide"
+              status=1
+            fi
+          done
+          echo "Checked $(ls docs/README.*.md | wc -l) translations."
+          exit $status
+
+  privacy:
+    name: No leaked device data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      # The device exposes its serial number publicly, and the session token is
+      # derived from it - so a stray copy-paste from a real unit would publish a
+      # working credential. Allow only the documented example addresses.
+      - name: Scan for real device addresses and serials
+        run: |
+          leaks=$(grep -rnoE '([0-9]{1,3}\.){3}[0-9]{1,3}' \
+                    --include='*.md' --include='*.sh' --include='*.ps1' --include='*.py' --include='*.yml' . \
+                  | grep -vE '192\.168\.10\.1$|192\.168\.1\.50$' || true)
+          if [ -n "$leaks" ]; then
+            echo "$leaks"
+            echo "::error::unexpected IP address - use 192.168.10.1 or 192.168.1.50 in examples"
+            exit 1
+          fi
+          if grep -rnE '\bdXNlcjo[A-Za-z0-9+/=]+' --include='*.md' --include='*.sh' --include='*.ps1' --include='*.py' . ; then
+            echo "::error::a real session token (base64 of user:<serial>) is committed"
+            exit 1
+          fi
+          echo "Clean."
