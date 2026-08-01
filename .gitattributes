@@ -1,0 +1,17 @@
+# Normalise line endings so the repo is identical on every platform.
+* text=auto eol=lf
+
+# Shell scripts and Python must keep LF: CRLF breaks the shebang on Linux
+# ("bad interpreter: /usr/bin/env bash^M").
+*.sh   text eol=lf
+*.py   text eol=lf
+*.yml  text eol=lf
+
+# PowerShell is Windows-native; keep CRLF in working copies.
+*.ps1  text eol=crlf
+
+# Never touch firmware images or binaries.
+*.bin  binary
+*.img  binary
+*.png  binary
+*.jpg  binary
