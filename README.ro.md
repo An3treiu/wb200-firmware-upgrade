@@ -18,6 +18,8 @@
 Totul de aici a fost dedus din interfața web a device-ului și **verificat pe hardware real** — două stații duse de la `2.0.33` la `2.0.51`. Fără fișiere proprietare, fără firmware modificat: sunt exact aceleași apeluri HTTP pe care le face și interfața oficială.
 
 > **De ce ai forța un upgrade?** [Documentația Wingbits](https://docs.wingbits.com/get-started/hardware-needed/hyfix-information/hyfix-hardware-faq) spune că o stație aflată sub versiunea `2.0.36` este actualizată automat de HyFix *„în câteva zile lucrătoare"*, cu condiția să rămână alimentată și conectată. Acest repo e pentru cazul în care preferi să nu aștepți, când o stație a rămas oricum pe o versiune veche, sau când vrei toate unitățile pe ultima versiune (`2.0.51` la momentul scrierii), nu pe minimul acceptat.
+>
+> De reținut: **ambele stații testate aici erau pe `2.0.33`, sub acel prag, și OTA-ul online a pornit la cerere** — device-ul a descărcat imediat cea mai nouă versiune, fără să aștepte verificarea periodică a HyFix. Faptul că ești sub 2.0.36 nu te obligă să aștepți.
 
 | | |
 |---|---|

@@ -18,6 +18,8 @@
 Everything here was reverse-engineered from the device's own web interface and **verified on real hardware** — two stations taken from `2.0.33` to `2.0.51`. No proprietary files, no patched firmware: these are the same HTTP calls the official web UI makes.
 
 > **Why force an upgrade at all?** [Wingbits' documentation](https://docs.wingbits.com/get-started/hardware-needed/hyfix-information/hyfix-hardware-faq) states that a station below firmware `2.0.36` gets updated by HyFix automatically *"within a couple business days"*, provided it stays powered and online. This repo is for when you would rather not wait, when a station has been sitting on an old build anyway, or when you want every unit on the newest release (`2.0.51` at the time of writing) instead of the minimum.
+>
+> Worth knowing: **both stations tested here were on `2.0.33`, below that threshold, and the online OTA still triggered on demand** — the device fetched the newest firmware immediately instead of waiting for HyFix's periodic check. Being below 2.0.36 does not restrict you to waiting.
 
 | | |
 |---|---|
