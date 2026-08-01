@@ -82,8 +82,15 @@ if (-not $Force) {
 
 # --- 3. Log in (the password IS the serial number) ---------------------------
 Write-Host "Logging in ..." -ForegroundColor Cyan
-$token = Invoke-RestMethod "http://$Ip/action/login" -Method Post `
-    -ContentType "application/x-www-form-urlencoded" -Body "mkey=$($dev.sn)"
+# The device terminates the token with a newline. System.Net.Cookie rejects any
+# value containing one ("the 'Value' part of the cookie is invalid"), so trim
+# before building the cookie.
+$token = ([string](Invoke-RestMethod "http://$Ip/action/login" -Method Post `
+    -ContentType "application/x-www-form-urlencoded" -Body "mkey=$($dev.sn)")).Trim()
+
+if ([string]::IsNullOrWhiteSpace($token)) {
+    throw "Login failed: the device returned an empty token for serial $($dev.sn)."
+}
 
 $session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
 $session.Cookies.Add((New-Object System.Net.Cookie("USER", $token, "/", $Ip)))

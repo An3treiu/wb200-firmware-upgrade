@@ -88,9 +88,11 @@ fi
 
 # --- 3. Log in (the password IS the serial number) ---------------------------
 echo "Logging in ..."
+# The device terminates the token with a newline; strip CR and LF so the value
+# cannot corrupt the Cookie header further down.
 TOKEN="$(curl -s -m 10 -X POST "http://$IP/action/login" \
     -H "Content-Type: application/x-www-form-urlencoded" \
-    -d "mkey=$SN")"
+    -d "mkey=$SN" | tr -d '\r\n')"
 
 if [ -z "$TOKEN" ]; then
     echo "ERROR: login failed (empty token)." >&2
