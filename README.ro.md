@@ -30,11 +30,11 @@ Ghid complet în **engleză** și **română** (pagina asta). Ghid scurt — sta
 
 | | | | | |
 |---|---|---|---|---|
-| 🇬🇧 [English](README.md) | 🇷🇴 [Română](README.ro.md) | 🇧🇬 [Български](docs/README.bg.md) | 🇨🇿 [Čeština](docs/README.cs.md) | 🇩🇰 [Dansk](docs/README.da.md) |
-| 🇩🇪 [Deutsch](docs/README.de.md) | 🇪🇪 [Eesti](docs/README.et.md) | 🇬🇷 [Ελληνικά](docs/README.el.md) | 🇪🇸 [Español](docs/README.es.md) | 🇫🇷 [Français](docs/README.fr.md) |
-| 🇮🇪 [Gaeilge](docs/README.ga.md) | 🇭🇷 [Hrvatski](docs/README.hr.md) | 🇮🇹 [Italiano](docs/README.it.md) | 🇱🇻 [Latviešu](docs/README.lv.md) | 🇱🇹 [Lietuvių](docs/README.lt.md) |
-| 🇭🇺 [Magyar](docs/README.hu.md) | 🇲🇹 [Malti](docs/README.mt.md) | 🇳🇱 [Nederlands](docs/README.nl.md) | 🇵🇱 [Polski](docs/README.pl.md) | 🇵🇹 [Português](docs/README.pt.md) |
-| 🇸🇰 [Slovenčina](docs/README.sk.md) | 🇸🇮 [Slovenščina](docs/README.sl.md) | 🇫🇮 [Suomi](docs/README.fi.md) | 🇸🇪 [Svenska](docs/README.sv.md) | 🇸🇦 [العربية](docs/README.ar.md) |
+| <img src="docs/flags/gb.png" width="22" alt=""> [English](README.md) | <img src="docs/flags/ro.png" width="22" alt=""> [Română](README.ro.md) | <img src="docs/flags/bg.png" width="22" alt=""> [Български](docs/README.bg.md) | <img src="docs/flags/cz.png" width="22" alt=""> [Čeština](docs/README.cs.md) | <img src="docs/flags/dk.png" width="22" alt=""> [Dansk](docs/README.da.md) |
+| <img src="docs/flags/de.png" width="22" alt=""> [Deutsch](docs/README.de.md) | <img src="docs/flags/ee.png" width="22" alt=""> [Eesti](docs/README.et.md) | <img src="docs/flags/gr.png" width="22" alt=""> [Ελληνικά](docs/README.el.md) | <img src="docs/flags/es.png" width="22" alt=""> [Español](docs/README.es.md) | <img src="docs/flags/fr.png" width="22" alt=""> [Français](docs/README.fr.md) |
+| <img src="docs/flags/ie.png" width="22" alt=""> [Gaeilge](docs/README.ga.md) | <img src="docs/flags/hr.png" width="22" alt=""> [Hrvatski](docs/README.hr.md) | <img src="docs/flags/it.png" width="22" alt=""> [Italiano](docs/README.it.md) | <img src="docs/flags/lv.png" width="22" alt=""> [Latviešu](docs/README.lv.md) | <img src="docs/flags/lt.png" width="22" alt=""> [Lietuvių](docs/README.lt.md) |
+| <img src="docs/flags/hu.png" width="22" alt=""> [Magyar](docs/README.hu.md) | <img src="docs/flags/mt.png" width="22" alt=""> [Malti](docs/README.mt.md) | <img src="docs/flags/nl.png" width="22" alt=""> [Nederlands](docs/README.nl.md) | <img src="docs/flags/pl.png" width="22" alt=""> [Polski](docs/README.pl.md) | <img src="docs/flags/pt.png" width="22" alt=""> [Português](docs/README.pt.md) |
+| <img src="docs/flags/sk.png" width="22" alt=""> [Slovenčina](docs/README.sk.md) | <img src="docs/flags/si.png" width="22" alt=""> [Slovenščina](docs/README.sl.md) | <img src="docs/flags/fi.png" width="22" alt=""> [Suomi](docs/README.fi.md) | <img src="docs/flags/se.png" width="22" alt=""> [Svenska](docs/README.sv.md) | <img src="docs/flags/sa.png" width="22" alt=""> [العربية](docs/README.ar.md) |
 
 ---
 

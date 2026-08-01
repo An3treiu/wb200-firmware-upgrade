@@ -125,6 +125,26 @@ jobs:
           done
           exit $status
 
+      # Flags are committed images rather than emoji: Windows ships no glyphs
+      # for regional-indicator pairs, so emoji flags render as bare letters
+      # ("GB", "RO") for a large share of readers.
+      - name: Flag images resolve and none are orphaned
+        run: |
+          status=0
+          for img in $(grep -ohE 'docs/flags/[a-z]{2}\.png' README.md README.ro.md | sort -u); do
+            if [ ! -f "$img" ]; then
+              echo "::error::a README references $img, which does not exist"
+              status=1
+            fi
+          done
+          for file in docs/flags/*.png; do
+            if ! grep -q "$file" README.md; then
+              echo "::error file=$file::flag image is committed but never used"
+              status=1
+            fi
+          done
+          exit $status
+
       - name: Short guides keep the shared section structure
         run: |
           status=0
