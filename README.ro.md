@@ -2,7 +2,7 @@
 
 # WB200 — Upgrade firmware
 
-**Actualizezi un miner HyFix WB200 (GEODNET) din linia de comandă — fără click-uri prin interfața web.**
+**Actualizezi o stație ADS-B Wingbits HyFix WB200 din linia de comandă — fără click-uri prin interfața web.**
 
 [![CI](https://github.com/An3treiu/wb200-firmware-upgrade/actions/workflows/ci.yml/badge.svg)](https://github.com/An3treiu/wb200-firmware-upgrade/actions/workflows/ci.yml)
 [![Licență: MIT](https://img.shields.io/badge/licen%C8%9B%C4%83-MIT-yellow.svg)](LICENSE)
@@ -15,7 +15,9 @@
 
 ---
 
-Totul de aici a fost dedus din interfața web a device-ului și **verificat pe hardware real** — un upgrade reușit `2.0.33 → 2.0.51`. Fără fișiere proprietare, fără firmware modificat: sunt exact aceleași apeluri HTTP pe care le face și interfața oficială.
+Totul de aici a fost dedus din interfața web a device-ului și **verificat pe hardware real** — două stații duse de la `2.0.33` la `2.0.51`. Fără fișiere proprietare, fără firmware modificat: sunt exact aceleași apeluri HTTP pe care le face și interfața oficială.
+
+> **De ce ai forța un upgrade?** [Documentația Wingbits](https://docs.wingbits.com/get-started/hardware-needed/hyfix-information/hyfix-hardware-faq) spune că o stație aflată sub versiunea `2.0.36` este actualizată automat de HyFix *„în câteva zile lucrătoare"*, cu condiția să rămână alimentată și conectată. Acest repo e pentru cazul în care preferi să nu aștepți, când o stație a rămas oricum pe o versiune veche, sau când vrei toate unitățile pe ultima versiune (`2.0.51` la momentul scrierii), nu pe minimul acceptat.
 
 | | |
 |---|---|
@@ -374,7 +376,7 @@ Extrase din interfața web a device-ului. Toate cer cookie-ul `USER`, **cu excep
 
 ## Disclaimer
 
-Fără nicio afiliere cu HyFix sau GEODNET. Scrierea de firmware implică întotdeauna un risc — o pană de curent în timpul scrierii poate bloca definitiv device-ul. Îl folosești pe propria răspundere, pe hardware care îți aparține.
+Fără nicio afiliere cu HyFix, Wingbits sau GEODNET. Scrierea de firmware implică întotdeauna un risc — o pană de curent în timpul scrierii poate bloca definitiv device-ul. Îl folosești pe propria răspundere, pe hardware care îți aparține.
 
 Verificat pe: **WB200, hw_v1.0**, upgrade `WB200_v2.0.33 → WB200-v2.0.51`.
 

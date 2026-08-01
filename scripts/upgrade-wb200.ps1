@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Upgrades the firmware of a HyFix WB200 (GEODNET miner) over the network.
+    Upgrades the firmware of a HyFix WB200 (Wingbits ADS-B station) over the network.
 
 .DESCRIPTION
     Runs the whole chain by itself: reads the device status, extracts the serial

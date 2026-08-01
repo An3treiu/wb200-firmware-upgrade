@@ -2,7 +2,7 @@
 
 **[English — gwida sħiħa](../README.md)** · **[Il-lingwi kollha](../README.md#-languages)**
 
-Aġġorna l-firmware ta' HyFix WB200 (minatur GEODNET) mil-linja tal-kmand. Ivverifikat fuq ħardwer reali: `2.0.33 → 2.0.51`.
+Aġġorna l-firmware ta' HyFix WB200 (stazzjon ADS-B ta' Wingbits) mil-linja tal-kmand. Ivverifikat fuq ħardwer reali: `2.0.33 → 2.0.51`.
 
 > Gwida qasira. Ir-referenza sħiħa — it-tabella kollha tal-endpoints, l-aġġornament offline għal verżjoni speċifika u n-nases kollha — tinsab fir-[README bl-Ingliż](../README.md).
 
@@ -78,4 +78,4 @@ Il-progress jixxandar dirett permezz ta' WebSocket fuq `ws://<IP>:8080/mcm` — 
 
 ## Liċenzja
 
-[MIT](../LICENSE) · Mingħajr ebda rabta ma' HyFix jew GEODNET. Il-kitba tal-firmware iġġib magħha riskju — għar-riskju tiegħek, fuq ħardwer li huwa tiegħek.
+[MIT](../LICENSE) · Mingħajr ebda rabta ma' HyFix, Wingbits jew GEODNET. Il-kitba tal-firmware iġġib magħha riskju — għar-riskju tiegħek, fuq ħardwer li huwa tiegħek.

@@ -2,7 +2,7 @@
 
 **[English — fullständig guide](../README.md)** · **[Alla språk](../README.md#-languages)**
 
-Uppdatera firmware på en HyFix WB200 (GEODNET-miner) från kommandoraden. Verifierat på riktig hårdvara: `2.0.33 → 2.0.51`.
+Uppdatera firmware på en HyFix WB200 (Wingbits ADS-B-station) från kommandoraden. Verifierat på riktig hårdvara: `2.0.33 → 2.0.51`.
 
 > Kort guide. Den fullständiga referensen — hela endpoint-tabellen, offlineuppdatering till en bestämd version och samtliga fallgropar — finns i den [engelska README-filen](../README.md).
 
@@ -78,4 +78,4 @@ Förloppet strömmas i realtid över WebSocket på `ws://<IP>:8080/mcm` — se [
 
 ## Licens
 
-[MIT](../LICENSE) · Ingen koppling till HyFix eller GEODNET. Att flasha firmware innebär alltid en risk — på egen risk, på hårdvara du äger.
+[MIT](../LICENSE) · Ingen koppling till HyFix, Wingbits eller GEODNET. Att flasha firmware innebär alltid en risk — på egen risk, på hårdvara du äger.

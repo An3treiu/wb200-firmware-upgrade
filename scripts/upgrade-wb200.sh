@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Upgrade the firmware of a HyFix WB200 (GEODNET miner) over the network.
+# Upgrade the firmware of a HyFix WB200 (Wingbits ADS-B station) over the network.
 #
 # Runs the whole chain by itself: reads the device status, extracts the serial
 # number, logs in, verifies the preconditions, triggers the online upgrade and
