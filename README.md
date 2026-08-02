@@ -2,7 +2,7 @@
 
 # WB200 Firmware Upgrade
 
-**Flash a HyFix WB200 GEODNET miner from the command line — no clicking through the web UI.**
+**Flash a HyFix WB200 Wingbits ADS-B station from the command line — no clicking through the web UI.**
 
 [![CI](https://github.com/An3treiu/wb200-firmware-upgrade/actions/workflows/ci.yml/badge.svg)](https://github.com/An3treiu/wb200-firmware-upgrade/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
@@ -15,7 +15,11 @@
 
 ---
 
-Everything here was reverse-engineered from the device's own web interface and **verified on real hardware** — a successful `2.0.33 → 2.0.51` upgrade. No proprietary files, no patched firmware: these are the same HTTP calls the official web UI makes.
+Everything here was reverse-engineered from the device's own web interface and **verified on real hardware** — two stations taken from `2.0.33` to `2.0.51`. No proprietary files, no patched firmware: these are the same HTTP calls the official web UI makes.
+
+> **Why force an upgrade at all?** [Wingbits' documentation](https://docs.wingbits.com/get-started/hardware-needed/hyfix-information/hyfix-hardware-faq) states that a station below firmware `2.0.36` gets updated by HyFix automatically *"within a couple business days"*, provided it stays powered and online. This repo is for when you would rather not wait, when a station has been sitting on an old build anyway, or when you want every unit on the newest release (`2.0.51` at the time of writing) instead of the minimum.
+>
+> Worth knowing: **both stations tested here were on `2.0.33`, below that threshold, and the online OTA still triggered on demand** — the device fetched the newest firmware immediately instead of waiting for HyFix's periodic check. Being below 2.0.36 does not restrict you to waiting.
 
 | | |
 |---|---|
@@ -374,7 +378,7 @@ Extracted from the device's own web interface. All require the `USER` cookie **e
 
 ## Disclaimer
 
-Not affiliated with HyFix or GEODNET. Flashing firmware always carries risk — a power cut mid-write can brick the device. Use at your own risk, on hardware you own.
+Not affiliated with HyFix, Wingbits or GEODNET. Flashing firmware always carries risk — a power cut mid-write can brick the device. Use at your own risk, on hardware you own.
 
 Verified on: **WB200, hw_v1.0**, upgrade `WB200_v2.0.33 → WB200-v2.0.51`.
 

@@ -2,7 +2,7 @@
 
 **[English — celoten vodnik](../README.md)** · **[Vsi jeziki](../README.md#-languages)**
 
-Nadgradite vdelano programsko opremo naprave HyFix WB200 (rudar GEODNET) iz ukazne vrstice. Preverjeno na resnični strojni opremi: `2.0.33 → 2.0.51`.
+Nadgradite vdelano programsko opremo naprave HyFix WB200 (postaja ADS-B Wingbits) iz ukazne vrstice. Preverjeno na resnični strojni opremi: `2.0.33 → 2.0.51`.
 
 > Kratek vodnik. Celotna referenca — celotna tabela končnih točk, nespletna nadgradnja na določeno različico in vse pasti — je v [angleškem README](../README.md).
 
@@ -78,4 +78,4 @@ Napredek se v živo prenaša prek WebSocketa na `ws://<IP>:8080/mcm` — glejte 
 
 ## Licenca
 
-[MIT](../LICENSE) · Brez kakršne koli povezave s HyFix ali GEODNET. Zapisovanje vdelane programske opreme prinaša tveganje — na lastno odgovornost, na strojni opremi, ki je vaša.
+[MIT](../LICENSE) · Brez kakršne koli povezave s HyFix, Wingbits ali GEODNET. Zapisovanje vdelane programske opreme prinaša tveganje — na lastno odgovornost, na strojni opremi, ki je vaša.

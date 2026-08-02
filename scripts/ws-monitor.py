@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Live OTA progress monitor for a HyFix WB200 (GEODNET miner).
+"""Live OTA progress monitor for a HyFix WB200 (Wingbits ADS-B station).
 
 The device's web UI receives upgrade progress over a WebSocket at
 ``ws://<ip>:8080/mcm``. This script subscribes to the same stream and prints
