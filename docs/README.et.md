@@ -2,7 +2,7 @@
 
 **[English — täielik juhend](../README.md)** · **[Kõik keeled](../README.md#-languages)**
 
-Uuenda HyFix WB200 (GEODNET-i kaevur) püsivara käsurealt. Kontrollitud päris riistvaral: `2.0.33 → 2.0.51`.
+Uuenda HyFix WB200 (Wingbitsi ADS-B jaam) püsivara käsurealt. Kontrollitud päris riistvaral: `2.0.33 → 2.0.51`.
 
 > Lühijuhend. Täielik ülevaade — kogu lõpp-punktide tabel, võrguväline uuendamine kindlale versioonile ja kõik lõksud — on [ingliskeelses README-s](../README.md).
 
@@ -78,4 +78,4 @@ Edenemist edastatakse reaalajas WebSocketi kaudu aadressil `ws://<IP>:8080/mcm` 
 
 ## Litsents
 
-[MIT](../LICENSE) · Ei ole seotud HyFixi ega GEODNET-iga. Püsivara kirjutamine on alati riskantne — omal vastutusel, sinu enda riistvaral.
+[MIT](../LICENSE) · Ei ole seotud HyFixi, Wingbitsi ega GEODNET-iga. Püsivara kirjutamine on alati riskantne — omal vastutusel, sinu enda riistvaral.

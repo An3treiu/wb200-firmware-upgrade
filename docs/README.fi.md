@@ -2,7 +2,7 @@
 
 **[English — täydellinen opas](../README.md)** · **[Kaikki kielet](../README.md#-languages)**
 
-Päivitä HyFix WB200 -laitteen (GEODNET-louhija) laiteohjelmisto komentoriviltä. Todennettu oikealla laitteistolla: `2.0.33 → 2.0.51`.
+Päivitä HyFix WB200 -laitteen (Wingbitsin ADS-B-asema) laiteohjelmisto komentoriviltä. Todennettu oikealla laitteistolla: `2.0.33 → 2.0.51`.
 
 > Lyhyt opas. Täydellinen viitedokumentaatio — koko päätepistetaulukko, offline-päivitys tiettyyn versioon ja kaikki sudenkuopat — löytyy [englanninkielisestä README-tiedostosta](../README.md).
 
@@ -78,4 +78,4 @@ Edistyminen välitetään reaaliaikaisesti WebSocketin kautta osoitteessa `ws://
 
 ## Lisenssi
 
-[MIT](../LICENSE) · Ei yhteyttä HyFixiin tai GEODNETiin. Laiteohjelmiston kirjoittamiseen liittyy aina riski — omalla vastuulla, omistamallasi laitteistolla.
+[MIT](../LICENSE) · Ei yhteyttä HyFixiin, Wingbitsiin tai GEODNETiin. Laiteohjelmiston kirjoittamiseen liittyy aina riski — omalla vastuulla, omistamallasi laitteistolla.

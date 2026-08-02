@@ -2,7 +2,7 @@
 
 **[English — pilnīga rokasgrāmata](../README.md)** · **[Visas valodas](../README.md#-languages)**
 
-Atjauniniet HyFix WB200 (GEODNET racēja) programmaparatūru no komandrindas. Pārbaudīts uz reālas aparatūras: `2.0.33 → 2.0.51`.
+Atjauniniet HyFix WB200 (Wingbits ADS-B stacijas) programmaparatūru no komandrindas. Pārbaudīts uz reālas aparatūras: `2.0.33 → 2.0.51`.
 
 > Īsa rokasgrāmata. Pilnā atsauce — visa galapunktu tabula, bezsaistes atjaunināšana uz konkrētu versiju un visas lamatas — atrodama [angļu valodas README](../README.md).
 
@@ -78,4 +78,4 @@ Norise tiek pārraidīta tiešraidē caur WebSocket adresē `ws://<IP>:8080/mcm`
 
 ## Licence
 
-[MIT](../LICENSE) · Nav saistīts ar HyFix vai GEODNET. Programmaparatūras ierakstīšana vienmēr ir riskanta — uz jūsu paša atbildību, uz aparatūras, kas pieder jums.
+[MIT](../LICENSE) · Nav saistīts ar HyFix, Wingbits vai GEODNET. Programmaparatūras ierakstīšana vienmēr ir riskanta — uz jūsu paša atbildību, uz aparatūras, kas pieder jums.

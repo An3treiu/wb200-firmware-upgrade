@@ -2,7 +2,7 @@
 
 **[English — potpuni vodič](../README.md)** · **[Svi jezici](../README.md#-languages)**
 
-Nadogradite firmver uređaja HyFix WB200 (GEODNET rudar) iz naredbenog retka. Provjereno na stvarnom hardveru: `2.0.33 → 2.0.51`.
+Nadogradite firmver uređaja HyFix WB200 (Wingbits ADS-B stanica) iz naredbenog retka. Provjereno na stvarnom hardveru: `2.0.33 → 2.0.51`.
 
 > Kratki vodič. Potpuna referenca — cijela tablica krajnjih točaka, izvanmrežna nadogradnja na određenu verziju i sve zamke — nalazi se u [engleskom README-u](../README.md).
 
@@ -78,4 +78,4 @@ Napredak se prenosi uživo putem WebSocketa na `ws://<IP>:8080/mcm` — vidi [`s
 
 ## Licencija
 
-[MIT](../LICENSE) · Bez ikakve povezanosti s HyFixom ili GEODNET-om. Zapisivanje firmvera nosi rizik — na vlastitu odgovornost, na hardveru koji posjedujete.
+[MIT](../LICENSE) · Bez ikakve povezanosti s HyFixom, Wingbitsom ili GEODNET-om. Zapisivanje firmvera nosi rizik — na vlastitu odgovornost, na hardveru koji posjedujete.

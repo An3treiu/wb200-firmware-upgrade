@@ -2,7 +2,7 @@
 
 **[English — volledige handleiding](../README.md)** · **[Alle talen](../README.md#-languages)**
 
-Werk de firmware van een HyFix WB200 (GEODNET-miner) bij vanaf de opdrachtregel. Geverifieerd op echte hardware: `2.0.33 → 2.0.51`.
+Werk de firmware van een HyFix WB200 (Wingbits ADS-B-station) bij vanaf de opdrachtregel. Geverifieerd op echte hardware: `2.0.33 → 2.0.51`.
 
 > Korte handleiding. De volledige referentie — complete endpoint-tabel, offline update naar een specifieke versie en alle valkuilen — staat in de [Engelse README](../README.md).
 
@@ -78,4 +78,4 @@ De voortgang wordt live doorgegeven via WebSocket op `ws://<IP>:8080/mcm` — zi
 
 ## Licentie
 
-[MIT](../LICENSE) · Geen enkele band met HyFix of GEODNET. Firmware flashen brengt risico's met zich mee — op eigen risico, op hardware die van jou is.
+[MIT](../LICENSE) · Geen enkele band met HyFix, Wingbits of GEODNET. Firmware flashen brengt risico's met zich mee — op eigen risico, op hardware die van jou is.

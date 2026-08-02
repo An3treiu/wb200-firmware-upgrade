@@ -2,7 +2,7 @@
 
 **[English — guide complet](../README.md)** · **[Toutes les langues](../README.md#-languages)**
 
-Flasher un HyFix WB200 (mineur GEODNET) en ligne de commande. Vérifié sur du matériel réel : `2.0.33 → 2.0.51`.
+Flasher un HyFix WB200 (station ADS-B Wingbits) en ligne de commande. Vérifié sur du matériel réel : `2.0.33 → 2.0.51`.
 
 > Guide court. La référence complète — tableau des points de terminaison, mise à jour hors ligne vers une version précise et tous les pièges — se trouve dans le [README anglais](../README.md).
 
@@ -78,4 +78,4 @@ La progression est diffusée en direct par WebSocket sur `ws://<IP>:8080/mcm` �
 
 ## Licence
 
-[MIT](../LICENSE) · Sans aucun lien avec HyFix ou GEODNET. Flasher un firmware comporte des risques — à vos propres risques, sur du matériel qui vous appartient.
+[MIT](../LICENSE) · Sans aucun lien avec HyFix, Wingbits ou GEODNET. Flasher un firmware comporte des risques — à vos propres risques, sur du matériel qui vous appartient.
