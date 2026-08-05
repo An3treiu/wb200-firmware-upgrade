@@ -2,7 +2,7 @@
 
 **[English — treoir iomlán](../README.md)** · **[Gach teanga](../README.md#-languages)**
 
-Uasghrádaigh dochtearraí gléas HyFix WB200 (mianadóir GEODNET) ón líne ordaithe. Fíoraithe ar chrua-earraí fíora: `2.0.33 → 2.0.51`.
+Uasghrádaigh dochtearraí gléas HyFix WB200 (stáisiún ADS-B Wingbits) ón líne ordaithe. Fíoraithe ar chrua-earraí fíora: `2.0.33 → 2.0.51`.
 
 > Treoir ghairid. Tá an tagairt iomlán — an tábla iomlán críochphointí, uasghrádú as líne go leagan ar leith, agus gach gaiste — sa [README Béarla](../README.md).
 
@@ -78,4 +78,4 @@ Tá `/action/devStatus` poiblí agus nochtann sé an tsraithuimhir — arb é an
 
 ## Ceadúnas
 
-[MIT](../LICENSE) · Gan aon cheangal le HyFix ná GEODNET. Baineann riosca le dochtearraí a scríobh — ar do phriacal féin, ar chrua-earraí ar leatsa iad.
+[MIT](../LICENSE) · Gan aon cheangal le HyFix, Wingbits ná GEODNET. Baineann riosca le dochtearraí a scríobh — ar do phriacal féin, ar chrua-earraí ar leatsa iad.

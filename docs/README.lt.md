@@ -2,7 +2,7 @@
 
 **[English — visas vadovas](../README.md)** · **[Visos kalbos](../README.md#-languages)**
 
-Atnaujinkite HyFix WB200 (GEODNET kasėjo) programinę aparatinę įrangą iš komandų eilutės. Patikrinta su tikra įranga: `2.0.33 → 2.0.51`.
+Atnaujinkite HyFix WB200 (Wingbits ADS-B stoties) programinę aparatinę įrangą iš komandų eilutės. Patikrinta su tikra įranga: `2.0.33 → 2.0.51`.
 
 > Trumpas vadovas. Visa informacija — pilna galinių taškų lentelė, atnaujinimas neprisijungus į konkrečią versiją ir visos spąstos — pateikta [angliškame README](../README.md).
 
@@ -78,4 +78,4 @@ Eiga tiesiogiai perduodama per WebSocket adresu `ws://<IP>:8080/mcm` — žr. [`
 
 ## Licencija
 
-[MIT](../LICENSE) · Nesusiję su HyFix ar GEODNET. Programinės aparatinės įrangos įrašymas visada rizikingas — savo atsakomybe, jums priklausančioje įrangoje.
+[MIT](../LICENSE) · Nesusiję su HyFix, Wingbits ar GEODNET. Programinės aparatinės įrangos įrašymas visada rizikingas — savo atsakomybe, jums priklausančioje įrangoje.

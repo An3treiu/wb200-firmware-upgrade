@@ -2,7 +2,7 @@
 
 **[English — teljes útmutató](../README.md)** · **[Minden nyelv](../README.md#-languages)**
 
-Frissítsd egy HyFix WB200 (GEODNET-bányász) firmware-ét parancssorból. Valódi hardveren ellenőrizve: `2.0.33 → 2.0.51`.
+Frissítsd egy HyFix WB200 (Wingbits ADS-B állomás) firmware-ét parancssorból. Valódi hardveren ellenőrizve: `2.0.33 → 2.0.51`.
 
 > Rövid útmutató. A teljes referencia — a teljes végpont-táblázat, offline frissítés adott verzióra és minden buktató — az [angol README-ben](../README.md) található.
 
@@ -78,4 +78,4 @@ A `/action/devStatus` nyilvános, és felfedi a sorozatszámot — ami egyben a 
 
 ## Licenc
 
-[MIT](../LICENSE) · Semmilyen kapcsolatban nem áll a HyFix vagy a GEODNET céggel. A firmware kiírása kockázattal jár — saját felelősségre, a saját tulajdonú hardvereden.
+[MIT](../LICENSE) · Semmilyen kapcsolatban nem áll a HyFix, a Wingbits vagy a GEODNET céggel. A firmware kiírása kockázattal jár — saját felelősségre, a saját tulajdonú hardvereden.

@@ -2,7 +2,7 @@
 
 **[English — guía completa](../README.md)** · **[Todos los idiomas](../README.md#-languages)**
 
-Flashea un HyFix WB200 (minero GEODNET) desde la línea de comandos. Verificado en hardware real: `2.0.33 → 2.0.51`.
+Flashea un HyFix WB200 (estación ADS-B de Wingbits) desde la línea de comandos. Verificado en hardware real: `2.0.33 → 2.0.51`.
 
 > Guía breve. La referencia completa — tabla íntegra de endpoints, actualización sin conexión a una versión concreta y todas las trampas — está en el [README en inglés](../README.md).
 
@@ -78,4 +78,4 @@ El progreso se transmite en directo por WebSocket en `ws://<IP>:8080/mcm` — co
 
 ## Licencia
 
-[MIT](../LICENSE) · Sin afiliación con HyFix ni GEODNET. Flashear firmware conlleva riesgos — bajo tu propia responsabilidad, en hardware de tu propiedad.
+[MIT](../LICENSE) · Sin afiliación con HyFix, Wingbits ni GEODNET. Flashear firmware conlleva riesgos — bajo tu propia responsabilidad, en hardware de tu propiedad.

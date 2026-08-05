@@ -2,7 +2,7 @@
 
 **[English — kompletní návod](../README.md)** · **[Všechny jazyky](../README.md#-languages)**
 
-Aktualizujte firmware zařízení HyFix WB200 (těžař GEODNET) z příkazové řádky. Ověřeno na skutečném hardwaru: `2.0.33 → 2.0.51`.
+Aktualizujte firmware zařízení HyFix WB200 (stanice ADS-B Wingbits) z příkazové řádky. Ověřeno na skutečném hardwaru: `2.0.33 → 2.0.51`.
 
 > Stručný návod. Úplná referenční příručka — celá tabulka koncových bodů, offline aktualizace na konkrétní verzi a všechny nástrahy — je v [anglickém README](../README.md).
 
@@ -78,4 +78,4 @@ Průběh se přenáší živě přes WebSocket na `ws://<IP>:8080/mcm` — viz [
 
 ## Licence
 
-[MIT](../LICENSE) · Bez jakékoli vazby na HyFix či GEODNET. Zápis firmwaru s sebou nese riziko — na vlastní nebezpečí, na hardwaru, který vlastníte.
+[MIT](../LICENSE) · Bez jakékoli vazby na HyFix, Wingbits či GEODNET. Zápis firmwaru s sebou nese riziko — na vlastní nebezpečí, na hardwaru, který vlastníte.

@@ -2,7 +2,7 @@
 
 **[English — pełny przewodnik](../README.md)** · **[Wszystkie języki](../README.md#-languages)**
 
-Zaktualizuj firmware urządzenia HyFix WB200 (koparka GEODNET) z wiersza poleceń. Sprawdzone na prawdziwym sprzęcie: `2.0.33 → 2.0.51`.
+Zaktualizuj firmware urządzenia HyFix WB200 (stacja ADS-B Wingbits) z wiersza poleceń. Sprawdzone na prawdziwym sprzęcie: `2.0.33 → 2.0.51`.
 
 > Krótki przewodnik. Pełna dokumentacja — kompletna tabela punktów końcowych, aktualizacja offline do konkretnej wersji i wszystkie pułapki — znajduje się w [angielskim README](../README.md).
 
@@ -78,4 +78,4 @@ Postęp jest przesyłany na żywo przez WebSocket pod `ws://<IP>:8080/mcm` — z
 
 ## Licencja
 
-[MIT](../LICENSE) · Bez żadnych powiązań z HyFix ani GEODNET. Wgrywanie firmware'u wiąże się z ryzykiem — na własną odpowiedzialność, na sprzęcie, który należy do Ciebie.
+[MIT](../LICENSE) · Bez żadnych powiązań z HyFix, Wingbits ani GEODNET. Wgrywanie firmware'u wiąże się z ryzykiem — na własną odpowiedzialność, na sprzęcie, który należy do Ciebie.
